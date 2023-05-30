@@ -101,6 +101,8 @@ public class JavaBossBot extends TelegramLongPollingBot {
 				SendMessage message = new SendMessage();
 				message.setChatId(String.valueOf(update.getMessage().getChatId()));
 				message.setText("Inserisci nomeCognome, nomeCibo e soldi");
+				String[] s = update.getMessage().getText().split(" ");
+				b.aggiungiOrdine(s[1], s[2], Integer.parseInt(s[3]));
 				try {
 					execute(message);
 				} catch (TelegramApiException e) {

@@ -42,6 +42,11 @@ public class Bar {
         }
         Cliente.setCredito(Cliente.getCredito() - prezzo);
     }
+    public void getMenu() {
+        for (Cibo cibo : cib) {
+            System.out.println(cibo.getNome() + " " + cibo.getPrezzo());
+        }
+    }
     public void aggiungiNuovoCibo(String n, int p) {
         Cibo cibo = new Cibo(n, p);
         cib.add(cibo);
