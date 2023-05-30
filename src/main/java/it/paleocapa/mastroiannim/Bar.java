@@ -45,7 +45,7 @@ public class Bar {
     public String getMenu() {
         String s="";
         for (Cibo cibo : cib) {
-            s+=cibo.getNome() + " " + cibo.getPrezzo();
+            s+=cibo.getNome() + " " + cibo.getPrezzo()+"\n";
         }
         return s;
     }
